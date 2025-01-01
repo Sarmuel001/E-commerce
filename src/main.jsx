@@ -9,6 +9,6 @@ export const element = <FontAwesomeIcon icon="fas fa-shopping-cart" />
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
