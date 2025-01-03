@@ -1,8 +1,8 @@
 {
-  "homepage": "https://sarmuel001.github.io/E-commerce",
+  "homepage": "https://sarmuel001.github.io/E-commerce/",
   "name": "client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
