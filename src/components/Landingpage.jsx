@@ -5,7 +5,7 @@ import Pagination from '../context/pagination';
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10); // Number of items per page
+  const [itemsPerPage] = useState(10); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,6 +13,7 @@ const LandingPage = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch('https://fakestoreapi.com/products');
+        console.log(response.status)
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

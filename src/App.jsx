@@ -45,21 +45,29 @@
 // export default App;
 
 import React from 'react'; 
+import { createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { CartProvider } from './context/cartcontext';
-import { AppRouter } from './router';
+import { Routers } from './router';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CartIcon from './components/carticon';
 
-const App = () => {
+
+
+const App = () => { 
   return (
-    <CartProvider>
-             <span><a href="/" style={{textDecoration:'none'}}><h1 style={{position:'fixed', color:'white', backgroundColor:'#28a745', paddingLeft:'20px',margin:'0px', width:'100vw'}}>CapacityBay Store</h1></a></span>
-                 <br/><br/> <br />
-              <AppRouter/>
+        <CartProvider>
+             <span><a href="/" style={{textDecoration:'none'}}><h1 style={{position:'sticky', color:'white', backgroundColor:'#28a745', paddingLeft:'20px',margin:'0px', width:'100vw'}}>CapacityBay Store</h1></a></span>  
+              {/* <CartIcon/> */}
+                 <br/><br/> <br/>
              <ToastContainer />
-              <div style={{width:'100wv', textAlign:'center', backgroundColor:'#28a745', color:'white'}}>
-               <h5>Designed by: Sam Adebayo</h5>      </div>
+              <Routers/>
+             
+              <footer>
+               <h5 style={{width:'100%', height:'3%',      position:'sticky',textAlign:'center', padding:'5px', backgroundColor:'#28a745', color:'white'}}>Designed by: Sam Adebayo</h5>      </footer>
     </CartProvider>
+
   );
 };
 
