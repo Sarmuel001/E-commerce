@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from './productcard';
 import Pagination from '../context/pagination';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import AppLayout from '../Layout';
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
@@ -50,6 +53,7 @@ const LandingPage = () => {
 
   return (
     <div>
+      <AppLayout>
       {Object.keys(groupedProducts).map(category => (
         <div key={category}>
           <h2>{category}</h2>
@@ -65,7 +69,9 @@ const LandingPage = () => {
         totalItems={products.length}
         paginate={paginate}
         currentPage={currentPage}
-      />
+        />
+      </AppLayout>
+        <ToastContainer/>
     </div>
   );
 };

@@ -45,29 +45,17 @@
 // export default App;
 
 import React from 'react'; 
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Router } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import { CartProvider } from './context/cartcontext';
-import { Routers } from './router';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { router } from './router';
 import CartIcon from './components/carticon';
 
 
 
 const App = () => { 
   return (
-        <CartProvider>
-             <span><a href="/" style={{textDecoration:'none'}}><h1 style={{position:'sticky', color:'white', backgroundColor:'#28a745', paddingLeft:'20px',margin:'0px', width:'100vw'}}>CapacityBay Store</h1></a></span>  
-              {/* <CartIcon/> */}
-                 <br/><br/> <br/>
-             <ToastContainer />
-              <Routers/>
-             
-              <footer>
-               <h5 style={{width:'100%', height:'3%',      position:'sticky',textAlign:'center', padding:'5px', backgroundColor:'#28a745', color:'white'}}>Designed by: Sam Adebayo</h5>      </footer>
-    </CartProvider>
-
+    < RouterProvider router={router}/>
   );
 };
 

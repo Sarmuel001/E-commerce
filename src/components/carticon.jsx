@@ -25,7 +25,7 @@ const CartIcon = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="cart-icon" onClick={() => navigate('/checkout')}>
+    <div className="cart-icon" onClick={() => navigate('/checkout')} >
       <span id='number'>{cart.length}</span>
       <img src={myImage} alt="My Image" style={{width:'30px'}} />
     </div>
