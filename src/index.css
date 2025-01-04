@@ -1,6 +1,6 @@
 :root {
   --background-color: #ffffff;
-  --text-color: #ffffff;
+  --text-color: #333;
   --border-color: #ccc;
   --button-background: #ddd;
   --button-text: #000;
@@ -17,6 +17,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  ;
   margin: 0;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
