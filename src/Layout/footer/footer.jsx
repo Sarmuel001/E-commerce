@@ -19,7 +19,7 @@ return (
         
       }}       
       >
-        <h4>Designed by: Sam Adebayo of CapacityBay Cohort4</h4>
+        <h4 id="footer">Designed by: Sam Adebayo of CapacityBay Cohort4</h4>
   </header>
   </div>
 )}

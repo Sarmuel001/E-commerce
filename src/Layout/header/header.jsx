@@ -24,7 +24,7 @@ export function Header  () {
      // CSS styles using JavaScript objects
      const styles = {
       button: {
-        height:'30px',
+        height:'25px',
         fontSize: "16px",
         cursor: "pointer",
         backgroundColor: "white",
@@ -37,8 +37,8 @@ export function Header  () {
   
   return (
     <div>
-<header
-        style={{
+<header id='header'>
+        {/* style={{
           width:"100%",
           height:"3rem",
           backgroundColor:'#28a745',
@@ -48,21 +48,20 @@ export function Header  () {
           justifyContent:'space-evenly',
           alignItems:"center",
           position:"fixed",
-          color:'white',
-          
-        }}       
-        >
+          color:'white', */}
+      
+        
           <div>
 
-          <Link to="/" >    
-          <span  > <h2 style={{ textDecoration:'none', color:'white' }}> CapacityBay Store</h2></span>
-          </Link>
+          <Link to="/" style={{ textDecoration:'none'}}>    
+          <span  > <h2 style={{color:'white' }}> CapacityBay Store</h2></span>
+          </Link> 
           </div>
           <div>
-          <input type="text" placeholder='Search Products' onChange={(e)=>{e.target.value}} style={{height:'28px', borderRadius:'5px'}} />
+          <input type="text" placeholder='Search Products' onChange={(e)=>{e.target.value}} style={{height:'20px', borderRadius:'5px', borderColor:'white'}} />
           </div>
           <div>
-          <button onClick={toggleMode} style={styles.button} >{mode === "light" ? "Switch to Dark Mode 🌙" : "Switch to Light Mode ☀️"} </button>
+          <button onClick={toggleMode} style={styles.button}><span>{mode === "light" ? "Dark Mode 🌙" : "Light Mode ☀️"} </span></button>
           </div>  
           
           <div>

@@ -1,19 +1,4 @@
-// import React from 'react';
-// import { useCart } from '../context/cartcontext';
 
-// const CartIcon = () => {
-//   const { cart } = useCart();
-
-//   return (
-//     <div className="cart-icon">
-//       <span>{cart.length}</span>
-
-//       <i className="fas fa-shopping-cart">Items</i>
-//     </div>
-//   );
-// };
-
-// export default CartIcon;
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/cartcontext';

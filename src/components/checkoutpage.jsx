@@ -44,11 +44,11 @@
 // };
 
 // export default CheckoutPage;
-
-
 import React from 'react';
 import { useCart } from '../context/cartcontext';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../Layout/footer/footer';
+import {Header} from '../Layout/header/header'
 
 const CheckoutPage = () => {
   const { cart, dispatch } = useCart();
@@ -103,6 +103,7 @@ const CheckoutPage = () => {
       </ul>
       <h3>Total: ${total.toFixed(2)}</h3>
       <button onClick={handlePayment}>Pay Now</button>
+    <Footer/>
     </div>
   );
 };
