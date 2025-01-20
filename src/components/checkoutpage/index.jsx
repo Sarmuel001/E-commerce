@@ -97,13 +97,13 @@ const CheckoutPage = () => {
               value={item.quantity}
               onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
             />
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
+            <button id='remove' onClick={() => handleRemove(item.id)}>Remove</button>
           </li>
         ))}
       </ul>
       <h3>Total: ${total.toFixed(2)}</h3>
       <button onClick={handlePayment}>Pay Now</button>
-    <Footer/>
+    
     </div>
   );
 };

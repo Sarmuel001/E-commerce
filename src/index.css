@@ -114,6 +114,7 @@ body {
 
 .checkout-page {
   padding: 20px;
+  margin: 50px;
 }
 
 .checkout-page ul {
@@ -288,6 +289,70 @@ body {
     width: 90px;
     height: 100px;
     font-size: .7rem;
+  }
+
+  .checkout-page {
+    padding: 0px;
+    margin: 20px;
+  }
+  
+  .checkout-page ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .checkout-page li {
+    width: 300px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: .5rem;
+  }
+  
+  .checkout-page img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .checkout-page h3 {
+    margin: 10px 0;
+  }
+  
+  .checkout-page input {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .checkout-page button {
+    background-color: ;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkout-page #remove {
+    background-color:#28a745 ;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .5rem;
+  }
+
+  .checkout-page button:hover {
+    background-color: #28a745;
+  }
+  
+  .receipt {
+    margin: 60px;
+    text-align: center;
   }
 
   .product-card {
