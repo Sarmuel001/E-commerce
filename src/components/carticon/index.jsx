@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../context/cartcontext';
-import myImage from '../media/cart.png';
+import { useCart } from '../../context/cartcontext';
+import myImage from '../../../src/media/cart.png';
 
 
 const CartIcon = () => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ProductCard from './productcard';
-import Pagination from '../context/pagination';
+import ProductCard from '../productcard/index';
+import Pagination from '../../context/pagination';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import AppLayout from '../Layout';
+import AppLayout from '../../Layout';
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
@@ -22,6 +22,7 @@ const LandingPage = () => {
         }
         const data = await response.json();
         setProducts(data);
+        console.log(data)
       } catch (error) {
         setError(error.message);
       } finally {
@@ -44,7 +45,7 @@ const LandingPage = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) {
-    return <div style={{color:'green'}}>Product Loading...</div>;
+    return <div className='Loading'>Just a moment, Product Loading...</div>;
   }
 
   if (error) {
@@ -56,7 +57,7 @@ const LandingPage = () => {
       <AppLayout>
       {Object.keys(groupedProducts).map(category => (
         <div key={category}>
-          <h2>{category}</h2>
+          <h2 className='categoryhead' >{category}</h2>
           <div className="product-grid">
             {groupedProducts[category].slice(indexOfFirstItem, indexOfLastItem).map(product => (
               <ProductCard key={product.id} product={product} />

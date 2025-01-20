@@ -14,7 +14,7 @@ return (
         textAlign:'center',
         backgroundColor:'#28a745',
         color:'white',
-        position:'sticky',
+        position:'sticky'
         
         
       }}       

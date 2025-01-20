@@ -1,5 +1,6 @@
 import React from 'react';
-import { useCart } from '../context/cartcontext';
+import { useCart } from '../../../src/context/cartcontext';
+import myImage from '../../../src/media/cart.png' 
 import { toast } from 'react-toastify';
 
 const ProductCard = ({ product }) => {

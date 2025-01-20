@@ -1,11 +1,12 @@
 import React from 'react';
 import {createBrowserRouter} from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './components/Landingpage';
-import CheckoutPage from './components/checkoutpage';
-import Receipt from './components/receipt';
-import CartIcon from './components/carticon';
-import ProductCard from './components/productcard';
+import LandingPage from './components/Landingpage/index';
+import CheckoutPage from './components/checkoutpage/index';
+import Receipt from './components/receipt/index';
+import CartIcon from './components/carticon/index';
+import ProductCard from './components/productcard/index';
+import Errorpage from './error';
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ export const router = createBrowserRouter([
   {
       path:"/carticon",
       element:<CartIcon/>
-  }
+  },
+  {
+    path:"*",
+    element:<Errorpage/>
+}
 ])
 
 // export const Routers = () => {

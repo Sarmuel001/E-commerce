@@ -45,10 +45,10 @@
 
 // export default CheckoutPage;
 import React from 'react';
-import { useCart } from '../context/cartcontext';
-import { useNavigate } from 'react-router-dom';
-import { Footer } from '../Layout/footer/footer';
-import {Header} from '../Layout/header/header'
+import { useCart } from '../../context/cartcontext';
+import { useNavigate,useLocation } from 'react-router-dom';
+import { Footer } from '../../Layout/footer/footer';
+import {Header} from '../../Layout/header/header'
 
 const CheckoutPage = () => {
   const { cart, dispatch } = useCart();
